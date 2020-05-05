@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TravelApp</string>
+    <string name="special_offers">offers</string>
+    <string name="place">norway</string>
 </resources>
