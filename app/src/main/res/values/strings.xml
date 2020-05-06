@@ -2,4 +2,7 @@
     <string name="app_name">TravelApp</string>
     <string name="special_offers">offers</string>
     <string name="place">norway</string>
+    <string name="city">oslo</string>
+    <string name="duration_trip">2 days</string>
+    <string name="price">$200</string>
 </resources>

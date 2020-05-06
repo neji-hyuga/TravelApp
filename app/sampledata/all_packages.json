@@ -1,0 +1,40 @@
+{
+  "packages": [
+    {
+      "place": "oslo",
+      "image": "@drawable/sao_paulo_sp",
+      "duration": "2 days",
+      "price": "$200"
+    },
+    {
+      "place": "bergen",
+      "image": "@drawable/belo_horizonte_mg",
+      "duration": "3 days",
+      "price": "$400"
+    },
+    {
+      "place": "stavanger",
+      "image": "@drawable/recife_pe",
+      "duration": "4 days",
+      "price": "$700"
+    },
+    {
+      "place": "arendal",
+      "image": "@drawable/rio_de_janeiro_rj",
+      "duration": "6 days",
+      "price": "$500"
+    },
+    {
+      "place": "drammen",
+      "image": "@drawable/salvador_ba",
+      "duration": "5 days",
+      "price": "$800"
+    },
+    {
+      "place": "larviki",
+      "image": "@drawable/foz_do_iguacu_pr",
+      "duration": "1 day",
+      "price": "$200"
+    }
+  ]
+}
