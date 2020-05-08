@@ -2,6 +2,7 @@ package com.alura.travelapp.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
@@ -23,6 +24,9 @@ public class PackagesListActivity extends AppCompatActivity {
 
         setTitle(APPBAR_TITLE);
         configuresList();
+
+        Intent intent = new Intent(this, ReviewOrderActivity.class);
+        startActivity(intent);
 
     }
 

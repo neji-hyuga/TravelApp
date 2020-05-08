@@ -6,13 +6,13 @@ public class TravelPackage {
 
     private final  String place;
     private final  String image;
-    private final  int tripDuration;
+    private final  int tripLength;
     private final BigDecimal price;
 
-    public TravelPackage(String place, String image, int tripDuration, BigDecimal price) {
+    public TravelPackage(String place, String image, int tripLength, BigDecimal price) {
         this.place = place;
         this.image = image;
-        this.tripDuration = tripDuration;
+        this.tripLength = tripLength;
         this.price = price;
     }
 
@@ -24,8 +24,8 @@ public class TravelPackage {
         return image;
     }
 
-    public int getTripDuration() {
-        return tripDuration;
+    public int getTripLength() {
+        return tripLength;
     }
 
     public BigDecimal getPrice() {

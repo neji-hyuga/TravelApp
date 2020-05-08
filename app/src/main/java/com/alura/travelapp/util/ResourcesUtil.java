@@ -8,9 +8,9 @@ public class ResourcesUtil {
 
     public static final String DRAWABLE = "drawable";
 
-    public static Drawable getDrawable(Context context, String stringDrawble) {
+    public static Drawable getDrawable(Context context, String stringDrawable) {
         Resources resources = context.getResources();
-        int drawableId = resources.getIdentifier(stringDrawble,
+        int drawableId = resources.getIdentifier(stringDrawable,
                 DRAWABLE, context.getPackageName());
         return resources.getDrawable(drawableId);
     }

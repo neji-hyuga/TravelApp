@@ -67,7 +67,7 @@ public class PackagesListAdapter extends BaseAdapter {
     private void showsDuration(View createdView, TravelPackage travelPackage) {
         TextView duration = createdView.findViewById(R.id.item_offer_trip_duration);
         String daysToString = DurationUtil
-                .formatDaysToString(travelPackage.getTripDuration());
+                .formatDaysToString(travelPackage.getTripLength());
         duration.setText(daysToString);
     }
 

@@ -29,7 +29,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@sample/all_packages.json/packages/image" />
+                tools:src="@sample/all_packages.json/packages/image"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/item_offer_place"

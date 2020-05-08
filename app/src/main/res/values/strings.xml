@@ -5,4 +5,6 @@
     <string name="city">oslo</string>
     <string name="duration_trip">2 days</string>
     <string name="price">$200</string>
+    <string name="text_button">Proceed to Checkout</string>
+    <string name="texto_total">total:</string>
 </resources>
