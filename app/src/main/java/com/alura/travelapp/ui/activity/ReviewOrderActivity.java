@@ -1,5 +1,6 @@
 package com.alura.travelapp.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -35,6 +36,9 @@ public class ReviewOrderActivity extends AppCompatActivity {
         showsTripLength(travelPackageOslo);
         showsPrice(travelPackageOslo);
         showsFormattedDates(travelPackageOslo);
+
+        Intent intent = new Intent(this, CheckoutActivity.class);
+        startActivity(intent);
     }
 
     private void showsFormattedDates(TravelPackage travelPackageOslo) {
