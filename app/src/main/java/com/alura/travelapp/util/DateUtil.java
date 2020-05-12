@@ -17,7 +17,7 @@ public class DateUtil {
         String formattedDepartureDay = dateFormatEn.format(departureDay.getTime());
         String formattedArrivalDay = dateFormatEn.format(arrivalDay.getTime());
         return formattedDepartureDay + " - "
-                + formattedArrivalDay + " de "
+                + formattedArrivalDay + " of "
                 + arrivalDay.get(Calendar.YEAR);
     }
 }

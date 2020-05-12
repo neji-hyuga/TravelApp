@@ -3,6 +3,8 @@ package com.alura.travelapp.ui.activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,7 +17,7 @@ import com.alura.travelapp.util.DurationUtil;
 import com.alura.travelapp.util.PriceUtil;
 import com.alura.travelapp.util.ResourcesUtil;
 
-import java.math.BigDecimal;
+import static com.alura.travelapp.ui.activity.Constants.PACKAGE_KEY;
 
 public class ReviewOrderActivity extends AppCompatActivity {
 
@@ -27,18 +29,41 @@ public class ReviewOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_review_order);
 
         setTitle(TITLE_APPBAR);
+        loadsReceivedTravelPackage();
+    }
 
-        TravelPackage travelPackageOslo = new TravelPackage("oslo", "sao_paulo_sp",
-                2, new BigDecimal("200.00"));
+    private void loadsReceivedTravelPackage() {
+        Intent intent = getIntent();
+        if (intent.hasExtra(PACKAGE_KEY)) {
+            final TravelPackage travelPackage = (TravelPackage) intent.getSerializableExtra(PACKAGE_KEY);
+            startsFields(travelPackage);
+            setUpButton(travelPackage);
+        }
+    }
 
-        showsPlace(travelPackageOslo);
-        showsImage(travelPackageOslo);
-        showsTripLength(travelPackageOslo);
-        showsPrice(travelPackageOslo);
-        showsFormattedDates(travelPackageOslo);
+    private void setUpButton(final TravelPackage travelPackage) {
+        Button buttonProceed = findViewById(R.id.activity_review_button_confirm_id);
+        buttonProceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goesToPayment(travelPackage);
+            }
+        });
+    }
 
-        Intent intent = new Intent(this, CheckoutActivity.class);
+    private void goesToPayment(TravelPackage travelPackage) {
+        Intent intent = new Intent(ReviewOrderActivity.this,
+                CheckoutActivity.class);
+        intent.putExtra(PACKAGE_KEY, travelPackage);
         startActivity(intent);
+    }
+
+    private void startsFields(TravelPackage travelPackage) {
+        showsPlace(travelPackage);
+        showsImage(travelPackage);
+        showsTripLength(travelPackage);
+        showsPrice(travelPackage);
+        showsFormattedDates(travelPackage);
     }
 
     private void showsFormattedDates(TravelPackage travelPackageOslo) {

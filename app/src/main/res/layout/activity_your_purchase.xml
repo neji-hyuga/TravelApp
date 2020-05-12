@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_purchase_header_image_view_id"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_congratulations_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_congratulations"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintEnd_toEndOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintStart_toStartOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintTop_toTopOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_realized_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_purchase_realized"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/activity_purchase_text_view_congratulations_id"
+        app:layout_constraintStart_toStartOf="@+id/activity_purchase_text_view_congratulations_id"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_congratulations_id" />
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_check_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_check"
+        app:layout_constraintEnd_toEndOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintStart_toStartOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_header_image_view_id" />
+
+    <ImageView
+        android:id="@+id/activity_purchase_place_image_view_id"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_check_id"
+        tools:srcCompat="@drawable/sao_paulo_sp"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_place_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_place_image_view_id"
+        tools:text="oslo" />
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_trip_period_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="12-08 to 12-20"
+        app:layout_constraintStart_toStartOf="@+id/activity_purchase_text_view_place_name_id"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_place_name_id" />
+
+    <TextView
+        android:id="@+id/activity_purchase_text_view_amount_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/activity_purchase_text_view_trip_period_id"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_trip_period_id"
+        tools:text="$200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

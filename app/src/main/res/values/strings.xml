@@ -16,4 +16,7 @@
     <string name="text_name_card">name on card</string>
     <string name="text_payment">make your payment</string>
     <string name="full_alphabet">abcdefghijklmnopqrstuvxywz ABCDEFGHIJKLMNOPQRSTUVXYWZ</string>
+    <string name="text_purchase_realized">your purchase has been realized ; )</string>
+    <string name="text_congratulations">congratulations!</string>
+    <string name="text_check">check your order:</string>
 </resources>
