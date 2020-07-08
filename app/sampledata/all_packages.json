@@ -35,6 +35,14 @@
       "image": "@drawable/foz_do_iguacu_pr",
       "duration": "1 day",
       "price": "$200"
+    },
+
+    {
+      "place": "larviki",
+      "image": "@drawable/sao_paulo_sp",
+      "duration": "1 day",
+      "price": "$200"
     }
+
   ]
 }

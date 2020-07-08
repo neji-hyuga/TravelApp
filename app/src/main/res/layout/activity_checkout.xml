@@ -5,18 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/activity_checkout_text_info_id"
+    <ImageView
+        android:id="@+id/view_header_checkout_id"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="@string/string_checkout"
-        android:textAlignment="center"
-        android:textStyle="bold"
+        android:layout_height="60dp"
+        app:srcCompat="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView_offers_txt_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/text_check"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_header_checkout_id"
+        app:layout_constraintEnd_toEndOf="@id/view_header_checkout_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/view_header_checkout_id"
+        app:layout_constraintTop_toTopOf="@id/view_header_checkout_id"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -27,7 +41,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/text_total"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_checkout_text_info_id" />
+        app:layout_constraintTop_toBottomOf="@+id/view_header_checkout_id" />
 
     <TextView
         android:id="@+id/activity_checkout_text_view_amount_id"
@@ -45,6 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:backgroundTint="@color/colorPrimary"
         android:hint="@string/text_card_number"
         android:inputType="number"
         android:maxLength="12"
@@ -59,6 +74,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/text_month"
         android:inputType="number"
+        android:backgroundTint="@color/colorPrimary"
         android:maxLength="2"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/activity_checkout_edit_text_card_cvv_id"
@@ -71,6 +87,7 @@
         android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:hint="@string/text_year_card"
+        android:backgroundTint="@color/colorPrimary"
         android:inputType="number"
         android:maxLength="2"
         android:textAlignment="center"
@@ -81,19 +98,20 @@
 
     <EditText
         android:id="@+id/activity_checkout_edit_text_card_cvv_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
         android:hint="@string/text_cvv"
+        android:backgroundTint="@color/colorPrimary"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="3"
         app:layout_constraintEnd_toEndOf="@id/activity_checkout_edit_text_card_number_id"
-        app:layout_constraintTop_toBottomOf="@id/activity_checkout_edit_text_card_number_id"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@id/activity_checkout_edit_text_card_number_id" />
 
     <EditText
         android:id="@+id/activity_checkout_edit_text_card_name_id"
         android:layout_width="0dp"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_height="wrap_content"
         android:digits="@string/full_alphabet"
         android:hint="@string/text_name_card"

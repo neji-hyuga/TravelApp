@@ -8,8 +8,8 @@
     <ImageView
         android:id="@+id/activity_purchase_header_image_view_id"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:background="@android:color/holo_orange_dark"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,29 +21,20 @@
         android:id="@+id/activity_purchase_text_view_congratulations_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/text_congratulations"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/activity_purchase_header_image_view_id"
         app:layout_constraintEnd_toEndOf="@+id/activity_purchase_header_image_view_id"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/activity_purchase_header_image_view_id"
         app:layout_constraintTop_toTopOf="@+id/activity_purchase_header_image_view_id"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/activity_purchase_text_view_realized_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_purchase_realized"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/activity_purchase_text_view_congratulations_id"
-        app:layout_constraintStart_toStartOf="@+id/activity_purchase_text_view_congratulations_id"
-        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_congratulations_id" />
 
     <TextView
         android:id="@+id/activity_purchase_text_view_check_id"
@@ -71,8 +62,10 @@
         android:id="@+id/activity_purchase_text_view_place_name_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_purchase_place_image_view_id"
         tools:text="oslo" />
@@ -94,5 +87,19 @@
         app:layout_constraintStart_toStartOf="@+id/activity_purchase_text_view_trip_period_id"
         app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_trip_period_id"
         tools:text="$200" />
+
+    <Button
+        android:id="@+id/activity_purchase_button_return_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/proceed_checkout_round_orange_button"
+        android:text="@string/text_button_purchase"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_purchase_text_view_amount_id"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

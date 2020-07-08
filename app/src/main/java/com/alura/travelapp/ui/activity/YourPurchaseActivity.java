@@ -3,6 +3,8 @@ package com.alura.travelapp.ui.activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,7 +35,25 @@ public class YourPurchaseActivity extends AppCompatActivity {
         if (intent.hasExtra(PACKAGE_KEY)) {
             TravelPackage travelPackage = (TravelPackage) intent.getSerializableExtra(PACKAGE_KEY);
             startsFields(travelPackage);
+            setUpPurchaseButton();
         }
+    }
+
+    private void setUpPurchaseButton() {
+        Button paymentButton = findViewById(R.id.activity_purchase_button_return_id);
+
+        paymentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goesToPackagesListActivity();
+            }
+        });
+    }
+
+    private void goesToPackagesListActivity() {
+        Intent intent = new Intent(this, PackagesListActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void startsFields(TravelPackage travelPackage) {

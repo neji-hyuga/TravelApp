@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
 
     <ImageView
-        android:id="@+id/view_header_id"
+        android:id="@+id/view_header_review_order_id"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         app:srcCompat="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,25 +24,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/special_offers"
-        android:textColor="#E4E4E4"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/view_header_id"
-        app:layout_constraintEnd_toEndOf="@id/view_header_id"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/view_header_id"
-        app:layout_constraintTop_toTopOf="@id/view_header_id"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textview_country_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/place"
-        android:textColor="#E4E4E4"
-        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView_offers_txt_id"
-        app:layout_constraintTop_toBottomOf="@+id/textView_offers_txt_id" />
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_header_review_order_id"
+        app:layout_constraintEnd_toEndOf="@id/view_header_review_order_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/view_header_review_order_id"
+        app:layout_constraintTop_toTopOf="@id/view_header_review_order_id"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/listview_packages_list_id"
@@ -52,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_header_id"
+        app:layout_constraintTop_toBottomOf="@id/view_header_review_order_id"
         tools:listitem="@layout/item_offer" />
 
 

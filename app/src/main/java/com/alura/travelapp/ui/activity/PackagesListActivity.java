@@ -14,6 +14,7 @@ import com.alura.travelapp.model.TravelPackage;
 import com.alura.travelapp.ui.adapter.PackagesListAdapter;
 
 import java.util.List;
+import java.util.Objects;
 
 import static com.alura.travelapp.ui.activity.Constants.PACKAGE_KEY;
 
@@ -25,7 +26,6 @@ public class PackagesListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_packages_list);
-        setTitle(APPBAR_TITLE);
         configuresList();
     }
 
